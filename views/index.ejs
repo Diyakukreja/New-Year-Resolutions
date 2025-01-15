@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title> hello all</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="stylesheets/styles.css">
+    </head>
+    <body id="bd" style="background-image: url('/images/1.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+        <div class = "main w-full min-h-screen">
+            <h1 class="styled-heading">This Year, Dreams Won't Stay Blurred—Let's Achieve Them Together!</h1>
+            
+            <div class = "form p-10 text-white">
+                <h1 class = "t"> Write Your New Year Resolution</h1>
+                <form action = "/create" method = "post">
+                    <input class = "block w-full rounded-md outline-none px-5 py-2 bg-zinc-800" type = "text" placeholder = "title goes here" name = "title">
+                    <textarea class = "block w-full rounded-md outline-none px-5 py-2 resize-none bg-zinc-800 mt-4"  placeholder="write task details" name = "det"></textarea>
+
+                    <input class = "mt-2 bg-blue-600 px-5 py-2 rounded-md" type="submit" value = "create task for 2025">
+                    <h4 class = "s"> Don't Forget to come text year to see how far you have reached;)</h4>
+                </form>
+            </div>
+            <div class = "tasks flex gap-3 flex-wrap p-10">
+                <% if (files.length >0){ %>
+                    <% files.forEach(function(val){ %>
+                        <div class = "task min-w-72  px-3 py-4 rounded-md bg-zinc-800 relative">
+                            <form action = "/delete" method = "post">
+                                <input type="hidden" name="fileName" value="<%= val %>">
+                                <input class = "absolute top-0 right-0 bg-red-500 text-sm text" type="submit" value = "X">
+                            </form>
+                            <h1 class = "text-white text-3xl tracking-tighter "> <%= val %> </h1> 
+
+                            <div class = "flex w-full justify-between items-center mt-3">
+                                <a class="text-blue-500 inline-block " href="/files/<%= val %>"> read more </a>
+                                <a class = "text-zinc-600" href = "/edit/<%= val %>">Edit Name</a>
+                            </div>
+                        </div>
+                    <% }) %>
+                <%} else{ %>
+                    <h3 class = "text-zinc-600">no tasks yet.</h3>
+                <% }  %>
+
+                
+
+                
+            </div>
+            </div>
+        </div>
+        <footer>
+            <h4 class = "footer"> By Diya <br> dkukreja010@gmail.com <br> (https://www.linkedin.com/in/diya-kukreja-157175288/) </h4>
+        </footer>
+    </body>
+</html>

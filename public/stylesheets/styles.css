@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'SpecialElite';  /* Name the font */
+    src: url('/fonts/SpecialElite-Regular.ttf') format('truetype');  /* Path to your TTF font file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.styled-heading {
+    color: white;  /* White text color */
+    font-size: 1.5rem;  /* Adjusted font size */
+    text-align: center;
+    padding: 20px;
+    margin:  auto;
+    font-family: 'SpecialElite', sans-serif;  /* Apply the custom font */
+    text-transform: capitalize;  /* Title case (first letter of each word capitalized) */
+    white-space: nowrap;  /* Prevent the text from wrapping to the next line */
+    text-shadow: 0 0 10px gold, 0 0 20px goldenrod;  /* Gold text-shadow */
+
+    top: 10%;  /* Align towards the top of the page */
+    left: 50%;  /* Align horizontally to the center */
+}
+.t{
+    color: white;
+    font-size: 1.7rem;
+    margin: 2px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  /* Apply the custom font */
+     /* Title case (first letter of each word capitalized) */
+    white-space: nowrap;  /* Prevent the text from wrapping to the next line */
+    text-shadow: 0 0 10px gold, 0 0 20px goldenrod;  /* Gold text-shadow */
+
+    top: 10%;  /* Align towards the top of the page */
+    left: 50%;
+}
+
+.s{
+    color: white;
+    font-size: 1rem;
+    margin: 5px 2px ;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  /* Apply the custom font */
+     /* Title case (first letter of each word capitalized) */
+    white-space: nowrap;  /* Prevent the text from wrapping to the next line */
+    text-shadow: 0 0 10px gold, 0 0 20px goldenrod;  /* Gold text-shadow */
+
+    top: 10%;  /* Align towards the top of the page */
+    left: 50%;
+}
+footer {
+    /* Fixes the footer at a specific position */
+    bottom: 0; /* Aligns it at the bottom */
+    right: 0; /* Aligns it to the right */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Semi-transparent background */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for some space around text */
+    font-size: 14px; /* Adjust font size */
+    text-align: right; /* Center text */
+}
+
+footer h4 {
+    margin: 0; /* Remove default margin */
+}
